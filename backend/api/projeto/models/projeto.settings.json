@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "projetos",
+  "info": {
+    "name": "Projeto"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Titulo": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "Descricao": {
+      "type": "text",
+      "required": true
+    },
+    "Ordem": {
+      "unique": true,
+      "required": true,
+      "min": 0,
+      "type": "integer"
+    }
+  }
+}
