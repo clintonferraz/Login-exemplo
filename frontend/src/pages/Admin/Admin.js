@@ -8,21 +8,31 @@ export default () => {
     const [login, setLogin] = useState('');
     const [password, setPassword] = useState('');
 
+     
     const handleLogin = async (e) => {
         e.preventDefault();
-
+        
         const data = {
             identifier: login,
             password: password
         }
+        try{
+            const response = await api.post('auth/local', data) ;
 
-        const response = await api.post('auth/local', data) ;
+            localStorage.setItem("tolken",response.data.jwt)
+            console.log(localStorage);
+            window.location.href = '/adminpanel';
+            
+            
 
-        console.log(response);
+        } catch {
+            alert("Falha ao fazer login. Verifique os dados inseridos e tente novamente!");
+            localStorage.clear();
+        }
 
     }
 
-
+  
     return (
         <div className="admin">
             <form className="login-form" onSubmit={handleLogin}>
@@ -35,5 +45,8 @@ export default () => {
             </form>
         </div>
     );
+   
 
 }
+
+

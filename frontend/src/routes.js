@@ -7,32 +7,35 @@ import Sobre from './pages/Sobre/Sobre';
 import Admin from './pages/Admin/Admin';
 import AdminPanel from './pages/AdminPanel/AdminPanel';
 
-const isAuthenticated = () => true;
+
+
+var isAuthenticated = false;
+if(localStorage.tolken)
+    isAuthenticated=true;
+else
+    isAuthenticated=false;
 
 
 
 
+const PrivateRoute = ({ component: Component, ...rest }) => {
 
+    return(
+        <Route 
+            { ... rest}
+            render={props => {
 
+                    if(isAuthenticated){
+                        return <Component { ... props} />
+                    }else{
+                        return <Redirect to={{ pathname: "/admin", state: { from: props.location} }} />
+                    }
+                }
+            }
+        />
+    )
 
-
-
-
-
-
-
-const PrivateRoute = ({ component: Component, ...rest }) => (
-    <Route 
-        { ... rest}
-        render={props => 
-            isAuthenticated() ? (
-                <Component { ... props} />
-            ) : (
-                <Redirect to={{ pathname: "/", state: { from: props.location} }} />
-            )   
-        }
-    />
-);
+};
 
 export default () => (
     <BrowserRouter>
