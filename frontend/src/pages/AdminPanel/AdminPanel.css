@@ -1,6 +1,29 @@
+
+.admin-panel{
+    height: 100%;
+}
+
 .btn-container{
     width: 100%;
     display: flex;
     justify-content: flex-end;
     padding: 2rem 2rem 0 0;
+}
+
+.projects-container{
+
+    height: 100%;
+    width: 100%;
+    padding: 3rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.projeto{
+    width: 14rem;
+    height: 16rem;
+    padding: 1rem;
+    background-color: black;
+    border: 1px solid white;
 }
