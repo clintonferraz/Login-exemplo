@@ -17,12 +17,6 @@
     "Descricao": {
       "type": "text",
       "required": true
-    },
-    "Ordem": {
-      "unique": true,
-      "required": true,
-      "min": 0,
-      "type": "integer"
     }
   }
 }

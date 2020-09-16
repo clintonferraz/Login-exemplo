@@ -3,27 +3,77 @@
     height: 100%;
 }
 
-.btn-container{
+.admin-panel .btn-container{
     width: 100%;
     display: flex;
     justify-content: flex-end;
     padding: 2rem 2rem 0 0;
 }
 
-.projects-container{
+#exit-btn{
+    margin-left: 1rem;
+}
+
+.admin-panel .projects-container{
 
     height: 100%;
     width: 100%;
     padding: 3rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-wrap: wrap;
+    align-content: flex-start;
 }
 
-.projeto{
+.admin-panel .projeto{
     width: 14rem;
     height: 16rem;
     padding: 1rem;
     background-color: black;
+    border: 1px solid rgb(107, 107, 107);
+    margin: 0.5rem;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.admin-panel .projeto button{
+    position: absolute;
+    bottom: 0.2rem;
+    right: 0.2rem;
+    background-color: black;
+    border: solid 1px rgb(107, 107, 107);
+    color: white;
+    cursor: pointer;
+    padding: 0.1rem 0.3rem;
+}
+
+
+
+
+
+
+
+
+
+.admin-panel .new-project-form{
+    position: absolute;
+    display: flex;
+    padding: 2rem;
+    background-color: rgb(2, 3, 2);
     border: 1px solid white;
+    flex-direction: column;
+    top: 3.5rem;
+    right: 2rem;
+}
+
+.admin-panel .new-project-form button{
+    cursor: pointer;
+    justify-self: start;
+}
+
+.admin-panel .buttons{
+    display: flex;
+    justify-content: space-between
 }
