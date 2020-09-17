@@ -5,12 +5,10 @@ import './AdminPanel.css';
 export default class AdminPanel extends React.Component {
  
     state = {
-        projeto: [],
-        titulo:'',
-        descricao:'',
+        projeto: []
     }
  
-    reloadProjects(){
+    loadProjects(){
         api.get('projetos')
         .then(response => {
             const projeto = response.data;
@@ -19,7 +17,7 @@ export default class AdminPanel extends React.Component {
     }
 
     componentDidMount(){
-        this.reloadProjects();
+        this.loadProjects();
     }
 
     render() {
@@ -37,7 +35,7 @@ export default class AdminPanel extends React.Component {
                     }
                 )
                 .then(response => { 
-                    this.reloadProjects();
+                    this.loadProjects();
                     console.log(response);
                 })
                 .catch(function (error) {
@@ -76,7 +74,7 @@ export default class AdminPanel extends React.Component {
                 }
             )
             .then(response => { 
-                this.reloadProjects();
+                this.loadProjects();
             });
 
 
@@ -96,7 +94,11 @@ export default class AdminPanel extends React.Component {
                        
                             <div className='projeto' key={projeto.id}>
                                 {projeto.Titulo}<br/><br/>
-                                {projeto.Descricao}
+                                <div className="descricao">
+                                    {projeto.Descricao}
+                                </div>
+
+                                
                                 <button onClick={() => delBtnClick(projeto)}>Delete</button>
                             </div> 
                         

@@ -26,7 +26,7 @@
 }
 
 .admin-panel .projeto{
-    width: 14rem;
+    width: 15rem;
     height: 16rem;
     padding: 1rem;
     background-color: black;
@@ -36,6 +36,12 @@
     display: flex;
     flex-direction: column;
     position: relative;
+    
+}
+
+.admin-panel .descricao{
+    overflow-y: auto;
+    margin-bottom: 1rem;
 }
 
 .admin-panel .projeto button{

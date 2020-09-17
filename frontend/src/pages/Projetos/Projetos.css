@@ -1,0 +1,31 @@
+.projetos-page .projetos-container{
+    min-height: calc(100vh - 10rem);
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+
+.projetos-page .projeto{
+    width: 16rem;
+    height: 16rem;
+    padding: 1rem;
+    background-color: black;
+   
+    margin: 1.5rem;
+   
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border-radius: 3px;
+}
+
+.projetos-page .titulo{
+    text-align: center;
+    color: #58A5E8;
+}
+
+.projetos-page .descricao{
+    overflow-y: auto;
+
+}

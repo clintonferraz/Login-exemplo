@@ -16,6 +16,7 @@
 
 .header-menu ul li{
     list-style-type: none;
+    text-decoration: underline;
     font-weight: bold;
 }
 
@@ -27,10 +28,7 @@
     color: #5E5FDB
 
 }
-.header-menu ul li:nth-child(3){
-    color: #58A5E8
 
-}
 
 .header-menu a:hover{
     text-decoration: underline;

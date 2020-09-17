@@ -8,7 +8,6 @@ export default () => (
                     <ul>
                         <li><Link to="/">Home</Link></li>
                         <li><Link to="/projetos">Projetos</Link></li>
-                        <li><Link to="/sobre">Sobre</Link></li>
                     </ul>
             </div>
         </div>
