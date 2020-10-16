@@ -14,8 +14,7 @@ export default () => (
                 &emsp;-Para visualizar os campos existentes, clique na aba "Projetos" acima.<br/>
                 <br/>
                 &emsp;-Para acessar o painel, entre na rota "/admin".<br/>
-                &emsp;&emsp;&emsp;Login: Usuario1<br/>
-                &emsp;&emsp;&emsp;Senha: 123456<br/>
+                &emsp;&emsp;&emsp;É necessário criar um usuário novo através do painel de administração do strapi.<br/>
                 <br/>
                 <br/>
                 <br/>

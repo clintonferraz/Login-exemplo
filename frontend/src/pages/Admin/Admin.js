@@ -19,7 +19,7 @@ export default () => {
         try{
             const response = await api.post('auth/local', data) ;
 
-            localStorage.setItem("tolken",response.data.jwt)
+            localStorage.setItem("tolken", response.data.jwt);
             console.log(localStorage);
             window.location.href = '/adminpanel';
             
